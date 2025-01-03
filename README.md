@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# An open-source API to search for through the Pokemon TCG Pocket cards by ID, Name, Type, Rarity or Pack.
 
 ## Getting Started
 
-First, run the development server:
+First, install the packages:
+
+```bash
+npm install
+```
+
+Then build the project:
+
+```bash
+npm run build
+```
+
+Then start the server:
+
+```bash
+npm start
+```
+
+To fetch the latest card data:
+```bash
+npm run fetch-data
+```
+
+To run the dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Usage
+You can navigate to [http://localhost:3000/api](http://localhost:3000/api) to use the API.
+### Endpoints
+* Get all card data: `/all-cards`
+* Get cards by id: `/id/[...ids]`
+* Get cards by name: `/name/[name]`
+* Get cards by pack: `/pack/[pack]`
+* Get cards by rarity: `/rarity/[...rarity]`
+* Get cards by type: `/type/[...types]`
+### Examples
+* Get Grass and Fire Types: `/api/type/grass/fire`
+* Get Bulbasaur and Venusaur by ID: `/api/id/a1-001/a1-003`
+* Get Cards in Mewtwo Pack: `/api/pack/mewtwo`
+* Get Charizard Cards by Name: `/api/name/charizard`
+* Get Rare and EX Cards: `/api/rarity/rare/ex`
