@@ -1,4 +1,4 @@
-# An open-source API to search for through the Pokemon TCG Pocket cards by ID, Name, Type, Rarity or Pack.
+### An open-source API to search for through the Pokemon TCG Pocket cards by ID, Name, Type, Rarity or Pack.
 
 ## Getting Started
 
